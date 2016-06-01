@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "dependencies": {
+    "phaser": "^2.4.6"
+  },
+  "devDependencies": {
+    "audiosprite": "^0.5.0",
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "browser-sync": "^2.11.1",
+    "browser-sync-webpack-plugin": "^1.0.1",
+    "chai": "^3.4.1",
+    "del": "^2.0.0",
+    "expose-loader": "^0.7.1",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.0",
+    "mocha": "^2.3.4",
+    "standard": "^6.0.5",
+    "webfontloader": "^1.6.21",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "dist": "gulp dist",
+    "build": "gulp build",
+    "builddev": "gulp webpack:build-dev",
+    "clean": "gulp dist:clean",
+    "start": "gulp default",
+    "audiosprite": "audiosprite -e m4a -f jukebox -g 3",
+    "audiosprite:sfx": "npm run audiosprite -- -o static/assets/sfx resources/sfx/*.wav",
+    "test": "mocha --compilers js:babel-core/register"
+  }
+}
